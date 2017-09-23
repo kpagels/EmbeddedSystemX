@@ -19,6 +19,7 @@ void sleep(clock_t wait)
 
 int main(int argc, char* argv[])
 {
+	cout << "What a turttle" << endl;
 	cout << "hello world" << endl;
 	EmbeddedSystemX *Embed1 = new EmbeddedSystemX();
 	int count = 0, i = 0;
