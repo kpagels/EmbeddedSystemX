@@ -146,6 +146,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EmbeddedState.h" />
+    <ClInclude Include="EmbeddedSystemX.h" />
     <ClInclude Include="Failure.h" />
     <ClInclude Include="PowerOnSelfTest.h" />
     <ClInclude Include="stdafx.h" />
@@ -153,6 +154,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EmbeddedState.cpp" />
+    <ClCompile Include="EmbeddedSystemX.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Failure.cpp" />
     <ClCompile Include="PowerOnSelfTest.cpp" />
