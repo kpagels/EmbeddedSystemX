@@ -1,4 +1,7 @@
 #pragma once
+
+class EmbeddedSystemX;
+
 class EmbeddedState
 {
 public:
@@ -20,7 +23,7 @@ public:
 	virtual void eventX();
 	virtual void eventY();
 protected:
-//	void ChangeState(EmbeddedSystemX*,EmbeddedState*);
+	void ChangeState(EmbeddedSystemX* t,EmbeddedState* s);
 	~EmbeddedState();
 };
 

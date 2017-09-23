@@ -2,17 +2,21 @@
 #include "EmbeddedState.h"
 #include "EmbeddedSystemX.h"
 
+class State;
+
 class Failure : public EmbeddedState
 {
 
 private:
-	EmbeddedSystemX* _context;
+	static EmbeddedState* _instance;
 
 public:
-	Failure(EmbeddedSystemX* context);
+	static EmbeddedState* Instance();
 	void Handle();
 	void Restart();
 	void Exit();
 	~Failure();
+protected:
+	Failure();
 };
 

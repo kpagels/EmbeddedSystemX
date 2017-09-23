@@ -2,8 +2,9 @@
 #include "EmbeddedState.h"
 #include "EmbeddedSystemX.h"
 
-class PowerOnSelfTest : public EmbeddedState
-{
+class State;
+
+class PowerOnSelfTest : public EmbeddedState {
 
 public:
 	static EmbeddedState* Instance();

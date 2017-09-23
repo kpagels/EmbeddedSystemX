@@ -1,6 +1,7 @@
 #include "stdafx.h"
-#include "EmbeddedState.h"
 #include "EmbeddedSystemX.h"
+#include "EmbeddedState.h"
+
 
 EmbeddedState::EmbeddedState(){}
 
@@ -19,8 +20,8 @@ void EmbeddedState::ConfigX() {}
 void EmbeddedState::chMode() {}
 void EmbeddedState::eventX() {}
 void EmbeddedState::eventY() {}
-//void EmbeddedState::ChangeState(EmbeddedSystemX* t, EmbeddedState* s) {
-//	t->ChangeState(s);
-//}
+void EmbeddedState::ChangeState(EmbeddedSystemX* t, EmbeddedState* s) {
+	t->ChangeState(s);
+}
 
 EmbeddedState::~EmbeddedState(){}
