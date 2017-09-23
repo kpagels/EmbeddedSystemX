@@ -2,8 +2,8 @@
 class EmbeddedState
 {
 public:
-	virtual void Handle() = 0;
 	EmbeddedState();
+	virtual void Handle() = 0;
 	~EmbeddedState();
 };
 
