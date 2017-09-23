@@ -36,6 +36,12 @@
     <ClInclude Include="EmbeddedSystemX.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Initializing.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Operational.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -54,6 +60,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="EmbeddedSystemX.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Initializing.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Operational.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

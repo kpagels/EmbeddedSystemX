@@ -11,9 +11,17 @@ Failure::Failure(EmbeddedSystemX* context) : _context(context) {};
 void Failure::Handle()
 {
 	cout << "Failure " << endl;
-	_context->setState(new PowerOnSelfTest(_context));
+	_context->ChangeState(new PowerOnSelfTest(_context));
 }
 
+void Failure::Restart()
+{
+
+}
+void Failure::Exit()
+{
+
+}
 
 Failure::~Failure()
 {

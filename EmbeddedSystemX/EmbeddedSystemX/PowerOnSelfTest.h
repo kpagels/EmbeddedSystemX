@@ -11,6 +11,8 @@ private:
 public:
 	PowerOnSelfTest(EmbeddedSystemX* context);
 	void Handle();
+	void SelfTestFailed();
+	void SelfTestOk();
 	~PowerOnSelfTest();
 };
 

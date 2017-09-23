@@ -10,11 +10,11 @@ PowerOnSelfTest::PowerOnSelfTest(EmbeddedSystemX* context) : _context(context) {
 void PowerOnSelfTest::Handle()
 {
 	cout << "PowerOnSelfTest " << endl;
-	_context->setState(new Failure(_context));
+	_context->ChangeState(new Failure(_context));
 }
 
+void PowerOnSelfTest::SelfTestFailed(){}
 
+void PowerOnSelfTest::SelfTestOk(){}
 
-PowerOnSelfTest::~PowerOnSelfTest()
-{
-}
+PowerOnSelfTest::~PowerOnSelfTest(){}

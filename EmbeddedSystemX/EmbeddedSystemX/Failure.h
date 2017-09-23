@@ -11,6 +11,8 @@ private:
 public:
 	Failure(EmbeddedSystemX* context);
 	void Handle();
+	void Restart();
+	void Exit();
 	~Failure();
 };
 

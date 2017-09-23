@@ -148,6 +148,8 @@
     <ClInclude Include="EmbeddedState.h" />
     <ClInclude Include="EmbeddedSystemX.h" />
     <ClInclude Include="Failure.h" />
+    <ClInclude Include="Initializing.h" />
+    <ClInclude Include="Operational.h" />
     <ClInclude Include="PowerOnSelfTest.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
@@ -155,8 +157,10 @@
   <ItemGroup>
     <ClCompile Include="EmbeddedState.cpp" />
     <ClCompile Include="EmbeddedSystemX.cpp" />
+    <ClCompile Include="Initializing.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Failure.cpp" />
+    <ClCompile Include="Operational.cpp" />
     <ClCompile Include="PowerOnSelfTest.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
