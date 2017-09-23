@@ -5,14 +5,9 @@ using namespace std;
 class EmbeddedSystemX
 {
 
-private:
-	EmbeddedState* _state;
-	friend class EmbeddedState;
-
 public:
 	EmbeddedSystemX(); //constructor
 	~EmbeddedSystemX();
-	void ChangeState(EmbeddedState*);
 	void Handle();
 	void SelfTestOk();
 	void Initialized();
@@ -29,5 +24,12 @@ public:
 	void chMode();
 	void eventX();
 	void eventY();
+	void ChangeState(EmbeddedState*);
+	friend class EmbeddedState; //should be private
+
+private:
+	EmbeddedState* _state; 
+
+
 
 };

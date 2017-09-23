@@ -19,6 +19,8 @@ public:
 	virtual void chMode();
 	virtual void eventX();
 	virtual void eventY();
+protected:
+//	void ChangeState(EmbeddedSystemX*,EmbeddedState*);
 	~EmbeddedState();
 };
 

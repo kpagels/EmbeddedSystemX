@@ -6,22 +6,27 @@
 
 using namespace std;
 
-PowerOnSelfTest::PowerOnSelfTest(EmbeddedSystemX* context) : _context(context) { cout << "PowerOnSelfTest constructor" << endl; };
+PowerOnSelfTest::PowerOnSelfTest(){}
+
 
 void PowerOnSelfTest::Handle()
 {
 	cout << "PowerOnSelfTest " << endl;
-	_context->ChangeState(new Failure(_context));
+	//_context->ChangeState(new Failure(_context));
 }
 
-void PowerOnSelfTest::SelfTestFailed()
+EmbeddedState* PowerOnSelfTest::_instance = 0;
+
+EmbeddedState* PowerOnSelfTest::Instance()
 {
-	_context->ChangeState(new Failure(_context));
+	//should be singleton
+	if (_instance == 0)
+	{
+		_instance = new PowerOnSelfTest;
+	}
+	return _instance;
+
 }
 
-void PowerOnSelfTest::SelfTestOk()
-{
-//	_context->ChangeState(new Initializing(_context));
-}
-
-PowerOnSelfTest::~PowerOnSelfTest(){}
+void PowerOnSelfTest::SelfTestFailed(){}
+void PowerOnSelfTest::SelfTestOk(){}

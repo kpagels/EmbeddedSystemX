@@ -5,14 +5,16 @@
 class PowerOnSelfTest : public EmbeddedState
 {
 
-private:
-	EmbeddedSystemX* _context;
-
 public:
-	PowerOnSelfTest(EmbeddedSystemX* context);
+	static EmbeddedState* Instance();
+
 	void Handle();
 	void SelfTestFailed();
 	void SelfTestOk();
-	~PowerOnSelfTest();
+protected:
+	PowerOnSelfTest();
+private:
+	static EmbeddedState* _instance;
+
 };
 
