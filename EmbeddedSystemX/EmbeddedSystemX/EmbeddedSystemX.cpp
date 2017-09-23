@@ -12,6 +12,7 @@ void EmbeddedSystemX::ChangeState(EmbeddedState* s)
 
 EmbeddedSystemX::EmbeddedSystemX()
 {
+	cout << " EmbeddedSystemX constructor " << endl;
 	_state = new PowerOnSelfTest(this);
 }
 
@@ -40,4 +41,5 @@ void EmbeddedSystemX::eventX() {};
 void EmbeddedSystemX::eventY() {};
 EmbeddedSystemX::~EmbeddedSystemX()
 {
+	cout << "EmbeddedSystemX destructor" << endl;
 }

@@ -9,6 +9,7 @@ private:
 
 public:
 	Operational(EmbeddedSystemX* context);
+	void Restart();
 	~Operational();
 };
 

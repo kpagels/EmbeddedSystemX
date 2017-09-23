@@ -6,6 +6,8 @@ Operational::Operational(EmbeddedSystemX * context)
 {
 }
 
+void Operational::Restart() {}
+
 Operational::~Operational()
 {
 }

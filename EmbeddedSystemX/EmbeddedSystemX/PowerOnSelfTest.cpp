@@ -5,7 +5,7 @@
 
 using namespace std;
 
-PowerOnSelfTest::PowerOnSelfTest(EmbeddedSystemX* context) : _context(context) {};
+PowerOnSelfTest::PowerOnSelfTest(EmbeddedSystemX* context) : _context(context) { cout << "PowerOnSelfTest constructor" << endl; };
 
 void PowerOnSelfTest::Handle()
 {
