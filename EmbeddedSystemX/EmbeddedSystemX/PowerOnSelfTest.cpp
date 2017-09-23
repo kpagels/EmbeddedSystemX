@@ -2,6 +2,7 @@
 #include <iostream>
 #include "PowerOnSelfTest.h"
 #include "Failure.h"
+#include "Initializing.h"
 
 using namespace std;
 
@@ -13,8 +14,14 @@ void PowerOnSelfTest::Handle()
 	_context->ChangeState(new Failure(_context));
 }
 
-void PowerOnSelfTest::SelfTestFailed(){}
+void PowerOnSelfTest::SelfTestFailed()
+{
+	_context->ChangeState(new Failure(_context));
+}
 
-void PowerOnSelfTest::SelfTestOk(){}
+void PowerOnSelfTest::SelfTestOk()
+{
+//	_context->ChangeState(new Initializing(_context));
+}
 
 PowerOnSelfTest::~PowerOnSelfTest(){}

@@ -12,7 +12,7 @@ void EmbeddedSystemX::ChangeState(EmbeddedState* s)
 
 EmbeddedSystemX::EmbeddedSystemX()
 {
-	cout << " EmbeddedSystemX constructor " << endl;
+	cout << " EmbeddedSystemX constructor" << endl;
 	_state = new PowerOnSelfTest(this);
 }
 
