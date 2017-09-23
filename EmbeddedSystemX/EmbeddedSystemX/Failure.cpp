@@ -9,7 +9,6 @@ EmbeddedState* Failure::_instance = 0;
 Failure::Failure() {}
 
 EmbeddedState* Failure::Instance() {
-	//should be singleton
 	if (_instance == 0) {
 		_instance = new Failure;
 	}

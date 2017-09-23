@@ -2,6 +2,7 @@
 #include "EmbeddedState.h"
 #include "EmbeddedSystemX.h"
 
+
 class Operational: public EmbeddedState
 {
 private:
