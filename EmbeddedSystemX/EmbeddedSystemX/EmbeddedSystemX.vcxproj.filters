@@ -24,7 +24,13 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\Exercise1\exercise1\Exercise1\PowerOnSelfTest.h">
+    <ClInclude Include="PowerOnSelfTest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Failure.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EmbeddedState.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -32,10 +38,16 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="EmbeddedSystemX.cpp">
+    <ClCompile Include="PowerOnSelfTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\Exercise1\exercise1\Exercise1\PowerOnSelfTest.cpp">
+    <ClCompile Include="Failure.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EmbeddedState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
