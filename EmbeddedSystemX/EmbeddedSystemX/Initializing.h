@@ -1,16 +1,23 @@
 #pragma once
-#include "EmbeddedSystemX.h"
 #include "EmbeddedState.h"
+#include "EmbeddedSystemX.h"
 using namespace std;
 
-class Initializing: public EmbeddedState
-{
-private:
-	EmbeddedSystemX* _context;
+class EmbeddedState;
 
+class Initializing: public EmbeddedState{
 public:
-	Initializing(EmbeddedSystemX* context);
+	static EmbeddedState* Instance();
+	virtual char* WhatCanWeDo(void);
+	void Handle();
 	void Initialized();
+	
+protected:
+	Initializing();
 	~Initializing();
+private:
+	static EmbeddedState* _instance;
+
+
 };
 

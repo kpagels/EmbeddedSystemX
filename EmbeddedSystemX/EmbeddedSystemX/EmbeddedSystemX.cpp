@@ -13,15 +13,17 @@ EmbeddedSystemX::EmbeddedSystemX(){
 }
 
 void EmbeddedSystemX::ChangeState(EmbeddedState* s){
-	if (s != _state)
-	{
+	if (s != _state){
 		_state = s;
 	}
 }
 
+char* EmbeddedSystemX::getStateCapabilities(void){
+	return _state->WhatCanWeDo();
+}
+
 void EmbeddedSystemX::Handle(){
-	cout << " Handle: " << _state << endl;
-	cout << " Handle:* " << &_state << endl;
+	cout << " Handle: EmbeddedSystemX " << _state << endl;
 	_state->Handle();
 }
 
@@ -71,7 +73,6 @@ void EmbeddedSystemX::eventX() {
 void EmbeddedSystemX::eventY() {
 	_state->eventY();
 }
-EmbeddedSystemX::~EmbeddedSystemX()
-{
+EmbeddedSystemX::~EmbeddedSystemX(){
 	cout << "EmbeddedSystemX destructor" << endl;
 }

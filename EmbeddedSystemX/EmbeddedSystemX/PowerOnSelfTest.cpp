@@ -22,7 +22,11 @@ EmbeddedState* PowerOnSelfTest::Instance(){
 void PowerOnSelfTest::SelfTestFailed(){}
 void PowerOnSelfTest::SelfTestOk(){}
 
+char* PowerOnSelfTest::WhatCanWeDo(void)
+{
+	return " WhatCanWeDo: PowerOnSelfTest\n";
+}
 void PowerOnSelfTest::Handle() {
-	cout << "PowerOnSelfTest " << endl;
+	cout << "PowerOnSelfTest \n" << endl;
 	//_context->ChangeState(new Failure(_context));
 }

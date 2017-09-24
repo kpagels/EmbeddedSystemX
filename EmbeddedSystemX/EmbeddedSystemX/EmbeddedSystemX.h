@@ -1,9 +1,12 @@
 #pragma once
 #include "EmbeddedState.h"
+#include "Failure.h"
+#include "Initializing.h"
+#include "Operational.h"
+#include "PowerOnSelfTest.h"
 using namespace std;
 
-class EmbeddedSystemX
-{
+class EmbeddedSystemX{
 
 public:
 	EmbeddedSystemX(); //constructor
@@ -25,6 +28,7 @@ public:
 	void eventX();
 	void eventY();
 	void ChangeState(EmbeddedState*);
+	char * getStateCapabilities(void);
 	friend class EmbeddedState; //should be private
 
 private:

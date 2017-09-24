@@ -1,10 +1,28 @@
 #include "stdafx.h"
+#include <iostream>
 #include "Initializing.h"
-#include "EmbeddedSystemX.h"
 
+using namespace std;
 
-Initializing::Initializing(EmbeddedSystemX* context) : _context(context) {}
+EmbeddedState* Initializing::_instance = 0;
 
-void Initializing::Initialized(){};
+Initializing::Initializing() {}
 
+EmbeddedState* Initializing::Instance() {
+	if (_instance == 0) {
+		_instance = new Initializing;
+	}
+	return _instance;
+}
+void Initializing::Initialized() {}
+
+char * Initializing::WhatCanWeDo(void)
+{
+	return "WhatCanWeDo: Initializing\n";
+}
+
+//hvorfor er den her funktion nødvendig?
+void Initializing::Handle() {
+	cout << "Handle: Initializing " << endl;
+}
 Initializing::~Initializing(){}

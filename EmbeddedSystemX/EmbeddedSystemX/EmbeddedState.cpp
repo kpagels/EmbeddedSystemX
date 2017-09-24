@@ -20,6 +20,10 @@ void EmbeddedState::ConfigX() {}
 void EmbeddedState::chMode() {}
 void EmbeddedState::eventX() {}
 void EmbeddedState::eventY() {}
+
+char* EmbeddedState::WhatCanWeDo(void) {
+	return "nothing";
+}
 void EmbeddedState::ChangeState(EmbeddedSystemX* t, EmbeddedState* s) {
 	t->ChangeState(s);
 }

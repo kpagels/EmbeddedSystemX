@@ -3,6 +3,7 @@
 #include "stdafx.h"
 #include <iostream>
 #include <time.h>
+#include <stdio.h>
 
 #include "EmbeddedSystemX.h"
 #include "EmbeddedState.h"
@@ -19,9 +20,16 @@ void sleep(clock_t wait)
 
 int main(int argc, char* argv[])
 {
-	cout << "Starting program" << endl;
+	printf("Starting program\n");
 	EmbeddedSystemX *Embed1 = new EmbeddedSystemX();
 	
+	printf(Embed1->getStateCapabilities());
+	printf("EMBED STATE: Initial state\n");
+	printf("--------\n");
+	Embed1->ChangeState(Initializing::Instance());
+	printf(Embed1->getStateCapabilities());
+
+
 
 	return 0;
 }

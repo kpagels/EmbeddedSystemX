@@ -2,8 +2,7 @@
 
 class EmbeddedSystemX;
 
-class EmbeddedState
-{
+class EmbeddedState{
 public:
 	EmbeddedState();
 	virtual void Handle() = 0;
@@ -22,7 +21,10 @@ public:
 	virtual void chMode();
 	virtual void eventX();
 	virtual void eventY();
+
+	virtual char* WhatCanWeDo(void);
 protected:
+
 	void ChangeState(EmbeddedSystemX* t,EmbeddedState* s);
 	~EmbeddedState();
 };
