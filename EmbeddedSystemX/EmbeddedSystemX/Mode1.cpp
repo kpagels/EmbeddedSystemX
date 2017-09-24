@@ -25,6 +25,11 @@ char* Mode1::WhatCanWeDo() {
 	return "Mode1: chMode / stop / suspend\n";
 }
 
+void Mode1::eventX(EmbeddedSystemX * system)
+{
+	system->responseM1eventX();
+}
+
 Mode1::~Mode1()
 {
 }

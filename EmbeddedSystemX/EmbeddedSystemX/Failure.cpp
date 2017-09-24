@@ -30,7 +30,7 @@ void Failure::Exit(EmbeddedSystemX* system){
 }
 
 void Failure::EnterState(EmbeddedSystemX* system) {
-	system->display(-1);
+	system->display(system->selftest_errorno);
 }
 
 Failure::~Failure(){}

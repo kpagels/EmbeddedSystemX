@@ -21,7 +21,7 @@ public:
 	void Start();
 	void Suspend();
 	void Resume();
-	void SelfTestFailed();
+	void SelfTestFailed(int ErrorNo);
 	void ConfigX();
 	void chMode();
 	void eventX();
@@ -32,9 +32,17 @@ public:
 	// Methods to simulate work
 	bool systemSelftest();
 	void display(int ErrorNo);
+	void startInitializing();
+	void readConfigurationInfo();
+	void PerformConfigurationX();
+	void responseM1eventX();
+	void responseM2eventX();
+	void responseM2eventY();
+	void responseM3eventX();
 
 	// Dummy vars for functionality
 	bool systemSelftest_result;
+	int selftest_errorno;
 
 private:
 	friend class EmbeddedState;

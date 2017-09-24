@@ -10,11 +10,11 @@ public:
 	virtual char* WhatCanWeDo(void);
 	void SelfTestFailed(EmbeddedSystemX*);
 	void SelfTestOk(EmbeddedSystemX*);
-	void systemSelfTest(EmbeddedSystemX*);
 	void EnterState(EmbeddedSystemX*);
 protected:
 	PowerOnSelfTest();
 private:
+	void systemSelfTest(EmbeddedSystemX*);
 	static EmbeddedState* _instance;
 
 };

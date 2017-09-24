@@ -37,7 +37,7 @@ void PowerOnSelfTest::systemSelfTest(EmbeddedSystemX* t){
 		t->SelfTestOk();
 	}
 	else{ 
-		t->SelfTestFailed();
+		t->SelfTestFailed(-2);
 	}
 }
 

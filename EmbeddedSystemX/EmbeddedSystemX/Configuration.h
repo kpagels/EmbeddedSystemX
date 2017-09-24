@@ -9,7 +9,8 @@ private:
 public:
 	static EmbeddedState* Instance();
 	void ConfigurationEnded(EmbeddedSystemX*);
-	void readConfigurationInfo();
+	void ConfigX(EmbeddedSystemX*);
+	void EnterState(EmbeddedSystemX*);
 
 	char * WhatCanWeDo();
 

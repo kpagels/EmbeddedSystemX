@@ -16,19 +16,38 @@ int main(int argc, char* argv[])
 	EmbeddedSystemX* Embed10 = new EmbeddedSystemX();
 	Embed10->systemSelftest_result = true;
 	Embed10->Restart();
-	
-	printf(Embed10->getStateCapabilities());
-	
-	printf(Embed10->getStateCapabilities());
-	Embed10->SelfTestOk();
-	printf(Embed10->getStateCapabilities());
-	Embed10->Initialized();
-	printf(Embed10->getStateCapabilities());
 	Embed10->Configure();
+	Embed10->ConfigX();
+	Embed10->ConfigX();
+	Embed10->ConfigX();
+	Embed10->ConfigurationEnded();
+	Embed10->Start();
+	Embed10->Stop();
+	Embed10->Start();
+	Embed10->Suspend();
+	Embed10->Resume();
+	Embed10->Suspend();
+	Embed10->Stop();
+	Embed10->Start();
+	Embed10->eventX();
+	Embed10->eventX();
+	Embed10->eventX();
+	Embed10->chMode();
+	Embed10->eventX();
+	Embed10->eventY();
+	Embed10->eventX();
+	Embed10->eventY();
+	Embed10->chMode();
+	Embed10->eventX();
+	Embed10->eventX();
+	Embed10->chMode();
+	Embed10->eventX();
+	Embed10->eventX();
+	return 0;
 	printf(Embed10->getStateCapabilities());
 	Embed10->ConfigurationEnded();
 	printf(Embed10->getStateCapabilities());
-	Embed10->Start();
+	
 	printf(Embed10->getStateCapabilities());
 	Embed10->Suspend();
 	printf(Embed10->getStateCapabilities());

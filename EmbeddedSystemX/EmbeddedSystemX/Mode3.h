@@ -9,6 +9,7 @@ public:
 	static EmbeddedState* Instance();
 	void chMode(EmbeddedSystemX* t);
 	char * WhatCanWeDo();
+	void eventX(EmbeddedSystemX* system);
 	Mode3();
 	~Mode3();
 };

@@ -8,6 +8,9 @@ public:
 	static EmbeddedState* Instance();
 	void chMode(EmbeddedSystemX* t);
 	char * WhatCanWeDo();
+	void eventX(EmbeddedSystemX* system);
+	void eventY(EmbeddedSystemX* system);
+protected:
 	Mode2();
 	~Mode2();
 };

@@ -6,11 +6,11 @@
 using namespace std;
 
 void RealTimeLoop::Stop(EmbeddedSystemX* t) {
-	cout << " -> Ready" << endl;
+	cout << "RealTimeLoop -> Ready" << endl;
 	ChangeState(t, Ready::Instance());
 }
 void RealTimeLoop::Suspend(EmbeddedSystemX * t){
-	cout << " -> Suspend" << endl;
+	cout << "RealTimeLoop -> Suspend" << endl;
 	ChangeState(t, Suspended::Instance());
 }
 

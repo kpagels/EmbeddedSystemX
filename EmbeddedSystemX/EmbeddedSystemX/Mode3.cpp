@@ -23,6 +23,11 @@ char* Mode3::WhatCanWeDo() {
 	return "Mode3: chMode / stop / suspend\n";
 }
 
+void Mode3::eventX(EmbeddedSystemX * system)
+{
+	system->responseM3eventX();
+}
+
 Mode3::~Mode3()
 {
 }

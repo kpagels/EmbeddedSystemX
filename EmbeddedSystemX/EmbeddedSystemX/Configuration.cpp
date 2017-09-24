@@ -18,7 +18,18 @@ void Configuration::ConfigurationEnded(EmbeddedSystemX* t){
 	ChangeState(t, Ready::Instance());
 }
 
-void Configuration::readConfigurationInfo(){}
+void Configuration::ConfigX(EmbeddedSystemX * system)
+{
+	system->PerformConfigurationX();
+}
+
+void Configuration::EnterState(EmbeddedSystemX * system)
+{
+	system->readConfigurationInfo();
+}
+
+
+
 
 char* Configuration::WhatCanWeDo() {
 	return "ConfigurationEnded\n";

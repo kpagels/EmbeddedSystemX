@@ -16,10 +16,11 @@ EmbeddedSystemX::EmbeddedSystemX(){
 }
 
 void EmbeddedSystemX::ChangeState(EmbeddedState* s){
+	std::cout << std::endl;
 	if (s != _state){
 		_state = s;
 	}
-	std::cout << this->getStateCapabilities() << std::endl;
+	std::cout << "EVENTS: " << this->getStateCapabilities();
 	s->EnterState(this);
 	
 }
@@ -59,7 +60,8 @@ void EmbeddedSystemX::Suspend() {
 void EmbeddedSystemX::Resume() {
 	_state->Resume(this);
 }
-void EmbeddedSystemX::SelfTestFailed() {
+void EmbeddedSystemX::SelfTestFailed(int ErrorNo) {
+	this->selftest_errorno = ErrorNo;
 	_state->SelfTestFailed(this);
 }
 void EmbeddedSystemX::ConfigX() {
@@ -87,4 +89,40 @@ bool EmbeddedSystemX::systemSelftest() {
 void EmbeddedSystemX::display(int ErrorNo)
 {
 	std::cout << "ErrorNo: " << ErrorNo << std::endl;
+}
+
+void EmbeddedSystemX::startInitializing()
+{
+	std::cout << "Initializing..." << std::endl;
+	std::cout << "Done..." << std::endl;
+	this->Initialized();
+}
+
+void EmbeddedSystemX::readConfigurationInfo() {
+	std::cout << "Reading Configuration..." << std::endl;
+}
+
+void EmbeddedSystemX::PerformConfigurationX()
+{
+	std::cout << "Performing ConfigurationX..." << std::endl;
+}
+
+void EmbeddedSystemX::responseM1eventX()
+{
+	std::cout << "Performing responseM1eventX..." << std::endl;
+}
+
+void EmbeddedSystemX::responseM2eventX()
+{
+	std::cout << "Performing responseM2eventX..." << std::endl;
+}
+
+void EmbeddedSystemX::responseM2eventY()
+{
+	std::cout << "Performing responseM2eventY..." << std::endl;
+}
+
+void EmbeddedSystemX::responseM3eventX()
+{
+	std::cout << "Performing responseM3eventX..." << std::endl;
 }
