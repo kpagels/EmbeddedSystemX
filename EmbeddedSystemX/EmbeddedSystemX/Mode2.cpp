@@ -21,7 +21,7 @@ void Mode2::chMode(EmbeddedSystemX* t) {
 }
 
 char* Mode2::WhatCanWeDo() {
-	return "chMode / stop / suspend\n";
+	return "Mode2: chMode / stop / suspend\n";
 }
 
 Mode2::~Mode2()

@@ -34,7 +34,11 @@ int main(int argc, char* argv[])
 	printf(Embed10->getStateCapabilities());
 	Embed10->chMode();
 	printf(Embed10->getStateCapabilities());
+	printf("Calling Stop - should change to Ready\n");
 	Embed10->Stop();
+	printf(Embed10->getStateCapabilities());
+	printf("Calling suspend  should change to Suspended \n");
+	Embed10->Suspend();
 	printf(Embed10->getStateCapabilities());
 	return 0;
 }
