@@ -26,31 +26,31 @@ void EmbeddedSystemX::Handle(){
 }
 
 void EmbeddedSystemX::SelfTestOk() { 
-	_state->SelfTestOk(); 
+	_state->SelfTestOk(this); 
 }
 void EmbeddedSystemX::Initialized() {
-	_state->Initialized();
+	_state->Initialized(this);
 }
 void EmbeddedSystemX::Restart() {
-	_state->Restart();
+	_state->Restart(this);
 }
 void EmbeddedSystemX::Configure() {
-	_state->Configure();
+	_state->Configure(this);
 }
 void EmbeddedSystemX::configurationEnded() {
-	_state->configurationEnded();
+	_state->configurationEnded(this);
 }
 void EmbeddedSystemX::Exit() {
-	_state->Exit();
+	_state->Exit(this);
 }
 void EmbeddedSystemX::Stop() {
-	_state->Stop();
+	_state->Stop(this);
 }
 void EmbeddedSystemX::Start() {
 	_state->Start(this);
 }
 void EmbeddedSystemX::Suspend() {
-	_state->Suspend();
+	_state->Suspend(this);
 }
 
 void EmbeddedSystemX::Resume() {

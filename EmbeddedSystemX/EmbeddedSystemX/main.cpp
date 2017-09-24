@@ -29,6 +29,11 @@ int main(int argc, char* argv[])
 	Embed1->Start();
 	printf(Embed1->getStateCapabilities()); 
 	printf("-------------\n");
+
+	//if(Embed1->get)
+
+
+	/*
 	Embed1->ChangeState(Failure::Instance());
 	printf(Embed1->getStateCapabilities());
 	Embed1->ChangeState(Operational::Instance());
@@ -41,7 +46,7 @@ int main(int argc, char* argv[])
 	Embed2->SelfTestFailed();
 	printf(Embed2->getStateCapabilities());
 	delete Embed1;
-
+	*/
 	return 0;
 }
 
