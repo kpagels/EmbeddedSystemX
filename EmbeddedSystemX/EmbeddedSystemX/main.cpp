@@ -2,7 +2,6 @@
 
 #include "stdafx.h"
 #include <iostream>
-#include <time.h>
 #include <stdio.h>
 
 #include "EmbeddedSystemX.h"
@@ -11,12 +10,6 @@
 #include "PowerOnSelfTest.h"
 using namespace std;
 
-void sleep(clock_t wait)
-{
-	clock_t goal;
-	goal = wait + clock();
-	while (goal > clock());
-}
 
 int main(int argc, char* argv[])
 {
