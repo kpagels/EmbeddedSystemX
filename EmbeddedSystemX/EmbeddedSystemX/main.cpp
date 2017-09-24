@@ -26,6 +26,7 @@ int main(int argc, char* argv[])
 	printf(Embed1->getStateCapabilities());
 	printf("EMBED STATE: Initial state\n");
 	printf("-------------\n");
+
 	Embed1->ChangeState(Initializing::Instance());
 	printf(Embed1->getStateCapabilities()); 
 	printf("-------------\n");
@@ -38,7 +39,6 @@ int main(int argc, char* argv[])
 	printf("----------------------\n");
 	EmbeddedSystemX* Embed2 = new EmbeddedSystemX();
 	printf(Embed2->getStateCapabilities());
-	Embed2->SelfTestFailed();
 	printf(Embed2->getStateCapabilities());
 	delete Embed1;
 
