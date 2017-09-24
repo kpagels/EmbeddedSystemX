@@ -34,6 +34,7 @@ int main(int argc, char* argv[])
 	Embed1->ChangeState(Operational::Instance());
 	printf(Embed1->getStateCapabilities());
 
+
 	printf("----------------------\n");
 	EmbeddedSystemX* Embed2 = new EmbeddedSystemX();
 	printf(Embed2->getStateCapabilities());
