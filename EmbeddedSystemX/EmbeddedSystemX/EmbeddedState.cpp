@@ -1,4 +1,6 @@
 #include "stdafx.h"
+#include <iostream>
+using namespace std;
 #include "EmbeddedSystemX.h"
 #include "EmbeddedState.h"
 
@@ -15,7 +17,8 @@ void EmbeddedState::Stop() {}
 void EmbeddedState::Start() {}
 void EmbeddedState::Suspend() {}
 void EmbeddedState::Resume() {}
-void EmbeddedState::SelfTestFailed() {}
+void EmbeddedState::SelfTestFailed() {
+	cout << "EmbeddedState:: SelfTestFailed" << endl;}
 void EmbeddedState::ConfigX() {}
 void EmbeddedState::chMode() {}
 void EmbeddedState::eventX() {}

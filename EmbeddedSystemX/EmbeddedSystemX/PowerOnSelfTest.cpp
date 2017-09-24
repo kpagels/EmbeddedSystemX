@@ -23,6 +23,7 @@ void PowerOnSelfTest::SelfTestFailed(EmbeddedSystemX* t){
 	cout << "PowerOnSelfTest: SelfTestFailed" << endl;
 	ChangeState(t, Failure::Instance());
 }
+
 void PowerOnSelfTest::SelfTestOk(EmbeddedSystemX* t){
 	cout << "PoweronSelfTest: SelfTestOk" << endl;
 	ChangeState(t, Initializing::Instance());
