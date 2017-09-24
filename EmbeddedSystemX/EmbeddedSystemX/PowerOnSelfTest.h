@@ -11,6 +11,7 @@ public:
 	void SelfTestFailed(EmbeddedSystemX*);
 	void SelfTestOk(EmbeddedSystemX*);
 	void systemSelfTest(EmbeddedSystemX*);
+	void EnterState(EmbeddedSystemX*);
 protected:
 	PowerOnSelfTest();
 private:

@@ -29,6 +29,13 @@ public:
 	void ChangeState(EmbeddedState*);
 	char * getStateCapabilities(void);
 
+	// Methods to simulate work
+	bool systemSelftest();
+	void display(int ErrorNo);
+
+	// Dummy vars for functionality
+	bool systemSelftest_result;
+
 private:
 	friend class EmbeddedState;
 	EmbeddedState* _state; 

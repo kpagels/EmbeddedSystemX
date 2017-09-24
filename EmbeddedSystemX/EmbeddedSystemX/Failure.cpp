@@ -4,9 +4,9 @@
 #include "PowerOnSelfTest.h"
 using namespace std;
 
-EmbeddedState* Failure::_instance = 0;
+EmbeddedState* Failure::_instance = nullptr;
 
-Failure::Failure() { display(-1); }
+Failure::Failure() { }
 
 EmbeddedState* Failure::Instance() {
 	if (_instance == 0) {
@@ -29,8 +29,8 @@ void Failure::Exit(EmbeddedSystemX* system){
 	//terrminate
 }
 
-void Failure::display(int ErrorNo){
-	cout << "ErrorNo: " << ErrorNo << endl;
+void Failure::EnterState(EmbeddedSystemX* system) {
+	system->display(-1);
 }
 
 Failure::~Failure(){}

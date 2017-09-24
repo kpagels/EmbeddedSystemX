@@ -15,7 +15,8 @@ public:
 	char* WhatCanWeDo();
 	void Restart(EmbeddedSystemX * system);
 	void Exit(EmbeddedSystemX * system);
-	void display(int ErrorNo);
+	void EnterState(EmbeddedSystemX * system);
+
 	~Failure();
 protected:
 	Failure();

@@ -6,13 +6,13 @@
 
 using namespace std;
 
-EmbeddedState* PowerOnSelfTest::_instance = 0;
+EmbeddedState* PowerOnSelfTest::_instance = nullptr;
 
 PowerOnSelfTest::PowerOnSelfTest(){ }
 
 EmbeddedState* PowerOnSelfTest::Instance(){
 	// A singleton class
-	if (_instance == 0){
+	if (_instance == nullptr){
 		_instance = new PowerOnSelfTest;
 	}
 	return _instance;
@@ -28,14 +28,17 @@ void PowerOnSelfTest::SelfTestOk(EmbeddedSystemX* t){
 	ChangeState(t, Initializing::Instance());
 }
 
+void PowerOnSelfTest::EnterState(EmbeddedSystemX* t) {
+	this->systemSelfTest(t);
+}
+
 void PowerOnSelfTest::systemSelfTest(EmbeddedSystemX* t){
-	if (true) {
-		SelfTestOk(t);
+	if (t->systemSelftest()) {
+		t->SelfTestOk();
 	}
 	else{ 
-		SelfTestFailed(t);
+		t->SelfTestFailed();
 	}
-
 }
 
 char* PowerOnSelfTest::WhatCanWeDo(void)

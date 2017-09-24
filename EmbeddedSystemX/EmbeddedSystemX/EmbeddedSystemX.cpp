@@ -7,13 +7,21 @@ using namespace std;
 
 EmbeddedSystemX::EmbeddedSystemX(){
 	cout << " EmbeddedSystemX constructor" << endl;
-	_state = PowerOnSelfTest::Instance(); //initial state
+
+	// Initial dummy
+	systemSelftest_result = false;
+
+	// Go !
+	this->ChangeState(PowerOnSelfTest::Instance());
 }
 
 void EmbeddedSystemX::ChangeState(EmbeddedState* s){
 	if (s != _state){
 		_state = s;
 	}
+	std::cout << this->getStateCapabilities() << std::endl;
+	s->EnterState(this);
+	
 }
 
 char* EmbeddedSystemX::getStateCapabilities(void){
@@ -68,4 +76,15 @@ void EmbeddedSystemX::eventY() {
 }
 EmbeddedSystemX::~EmbeddedSystemX(){
 	cout << "EmbeddedSystemX destructor" << endl;
+}
+
+bool EmbeddedSystemX::systemSelftest() {
+	bool result = systemSelftest_result;
+	systemSelftest_result = !systemSelftest_result;
+	return result;
+}
+
+void EmbeddedSystemX::display(int ErrorNo)
+{
+	std::cout << "ErrorNo: " << ErrorNo << std::endl;
 }

@@ -7,6 +7,7 @@ using namespace std;
 
 EmbeddedState::EmbeddedState(){}
 
+void EmbeddedState::EnterState(EmbeddedSystemX* system) {}
 void EmbeddedState::SelfTestOk(EmbeddedSystemX* system) {}
 void EmbeddedState::Initialized(EmbeddedSystemX* system) {}
 void EmbeddedState::Restart(EmbeddedSystemX* system) {}
