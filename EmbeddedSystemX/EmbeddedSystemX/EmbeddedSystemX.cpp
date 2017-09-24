@@ -52,7 +52,6 @@ void EmbeddedSystemX::Resume() {
 	_state->Resume(this);
 }
 void EmbeddedSystemX::SelfTestFailed() {
-	cout << "EmbeddedSystemX: SelfTestFailed" << endl;
 	_state->SelfTestFailed(this);
 }
 void EmbeddedSystemX::ConfigX() {
