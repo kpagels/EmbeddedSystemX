@@ -28,9 +28,9 @@ public:
 	void eventY();
 	void ChangeState(EmbeddedState*);
 	char * getStateCapabilities(void);
-	friend class EmbeddedState; //should be private
 
 private:
+	friend class EmbeddedState;
 	EmbeddedState* _state; 
 
 

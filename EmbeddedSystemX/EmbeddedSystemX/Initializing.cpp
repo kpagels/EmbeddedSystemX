@@ -14,12 +14,11 @@ EmbeddedState* Initializing::Instance() {
 	}
 	return _instance;
 }
-void Initializing::Initialized() {}
+void Initializing::Initialized(EmbeddedSystemX* t) {
+	ChangeState(t, Operational::Instance());
+}
 
-
-
-char * Initializing::WhatCanWeDo(void)
-{
+char * Initializing::WhatCanWeDo(void){
 	return "WhatCanWeDo: Initializing\n";
 }
 

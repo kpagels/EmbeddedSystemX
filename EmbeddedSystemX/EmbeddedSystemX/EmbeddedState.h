@@ -17,7 +17,6 @@ public:
 	void EmbeddedState::Resume(EmbeddedSystemX* system);
 	void EmbeddedState::SelfTestFailed(EmbeddedSystemX* system);
 	void EmbeddedState::ConfigX(EmbeddedSystemX* system);
-
 	void EmbeddedState::chMode(EmbeddedSystemX* system);
 	void EmbeddedState::eventX(EmbeddedSystemX* system);
 	void EmbeddedState::eventY(EmbeddedSystemX* system);

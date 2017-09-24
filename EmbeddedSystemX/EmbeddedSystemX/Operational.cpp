@@ -13,6 +13,8 @@ EmbeddedState* Operational::Instance() {
 char* Operational::WhatCanWeDo() {
 	return "WhatCanWeDo: Operational\n";
 }
-void Operational::Restart() {}
+void Operational::Restart(EmbeddedSystemX* t) {
+	ChangeState(t, PowerOnSelfTest::Instance());
+}
 
 Operational::~Operational(){}

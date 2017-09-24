@@ -9,7 +9,7 @@ class Initializing: public EmbeddedState{
 public:
 	static EmbeddedState* Instance();
 	virtual char* WhatCanWeDo(void);
-	void Initialized();
+	void Initialized(EmbeddedSystemX*);
 	
 protected:
 	Initializing();
