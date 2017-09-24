@@ -15,7 +15,7 @@ public:
 	void Initialized();
 	void Restart();
 	void Configure();
-	void configurationEnded();
+	void ConfigurationEnded();
 	void Exit();
 	void Stop();
 	void Start();

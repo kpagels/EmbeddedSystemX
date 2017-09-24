@@ -16,22 +16,16 @@ EmbeddedState* Failure::Instance() {
 
 }
 
-
 char* Failure::WhatCanWeDo() {
-	return "WhatCanWeDo: Failure\n";
-}
-
-void Failure::Handle()
-{
-	cout << "Failure " << endl;
-	//_context->ChangeState(new PowerOnSelfTest(_context));
+	return "Restart / Exit\n";
 }
 
 void Failure::Restart(EmbeddedSystemX* system){
-	// cout restaring ...
+	cout << "Failure -> PowerOnSelfTest" << endl;
 	system->ChangeState(PowerOnSelfTest::Instance());
 }
 void Failure::Exit(EmbeddedSystemX* system){
+	cout << "Failure -> Exit" << endl;
 	//terrminate
 }
 

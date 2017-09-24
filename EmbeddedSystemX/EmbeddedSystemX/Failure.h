@@ -13,7 +13,6 @@ private:
 public:
 	static EmbeddedState* Instance();
 	char* WhatCanWeDo();
-	void Handle();
 	void Restart(EmbeddedSystemX * system);
 	void Exit(EmbeddedSystemX * system);
 	~Failure();

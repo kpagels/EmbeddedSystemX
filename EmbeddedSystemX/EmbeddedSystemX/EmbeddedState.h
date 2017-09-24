@@ -9,7 +9,7 @@ public:
 	virtual void EmbeddedState::Initialized(EmbeddedSystemX* system);
 	virtual void EmbeddedState::Restart(EmbeddedSystemX* system);
 	virtual void EmbeddedState::Configure(EmbeddedSystemX* system);
-	virtual void EmbeddedState::configurationEnded(EmbeddedSystemX* system);
+	virtual void EmbeddedState::ConfigurationEnded(EmbeddedSystemX* system);
 	virtual void EmbeddedState::Exit(EmbeddedSystemX* system);
 	virtual void EmbeddedState::Stop(EmbeddedSystemX* system);
 	virtual void EmbeddedState::Start(EmbeddedSystemX* system);
@@ -20,7 +20,7 @@ public:
 	virtual void EmbeddedState::chMode(EmbeddedSystemX* system);
 	virtual void EmbeddedState::eventX(EmbeddedSystemX* system);
 	virtual void EmbeddedState::eventY(EmbeddedSystemX* system);
-	virtual char* WhatCanWeDo(void);
+	virtual char* WhatCanWeDo();
 protected:
 
 	void ChangeState(EmbeddedSystemX* t,EmbeddedState* s);

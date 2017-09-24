@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include <iostream>
 #include "Initializing.h"
+#include "Ready.h"
 
 using namespace std;
 
@@ -15,11 +16,12 @@ EmbeddedState* Initializing::Instance() {
 	return _instance;
 }
 void Initializing::Initialized(EmbeddedSystemX* t) {
-	//ChangeState(t, Operational::Instance());
+	cout << "Initializing -> Ready" << endl;
+	ChangeState(t, Ready::Instance());
 }
 
 char * Initializing::WhatCanWeDo(void){
-	return "WhatCanWeDo: Initializing\n";
+	return "Initialized\n";
 }
 
 Initializing::~Initializing(){}

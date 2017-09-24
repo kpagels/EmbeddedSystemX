@@ -16,29 +16,19 @@ EmbeddedState* PowerOnSelfTest::Instance(){
 		_instance = new PowerOnSelfTest;
 	}
 	return _instance;
-
 }
 
 void PowerOnSelfTest::SelfTestFailed(EmbeddedSystemX* t){
-	cout << "PowerOnSelfTest: SelfTestFailed" << endl;
+	cout << "PowerOnSelfTest -> Failure" << endl;
 	ChangeState(t, Failure::Instance());
 }
 
 void PowerOnSelfTest::SelfTestOk(EmbeddedSystemX* t){
-	cout << "PoweronSelfTest: SelfTestOk" << endl;
+	cout << "PoweronSelfTest -> Initializing" << endl;
 	ChangeState(t, Initializing::Instance());
-}
-
-void PowerOnSelfTest::Start(EmbeddedSystemX* t) {
-	int parameter = 1;
-	cout << "PoweronSelfTest: Started" << endl;
-	if (parameter = 1)
-		SelfTestOk(t);
-	else
-		SelfTestFailed(t);
 }
 
 char* PowerOnSelfTest::WhatCanWeDo(void)
 {
-	return " WhatCanWeDo: PowerOnSelfTest\n";
+	return "SelfTestOk / SelfTestFailed\n";
 }

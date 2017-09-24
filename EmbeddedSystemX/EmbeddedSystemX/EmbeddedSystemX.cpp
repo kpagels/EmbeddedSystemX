@@ -32,8 +32,8 @@ void EmbeddedSystemX::Restart() {
 void EmbeddedSystemX::Configure() {
 	_state->Configure(this);
 }
-void EmbeddedSystemX::configurationEnded() {
-	_state->configurationEnded(this);
+void EmbeddedSystemX::ConfigurationEnded() {
+	_state->ConfigurationEnded(this);
 }
 void EmbeddedSystemX::Exit() {
 	_state->Exit(this);

@@ -13,21 +13,29 @@ using namespace std;
 
 int main(int argc, char* argv[])
 {
-	printf("Starting program\n");
-	EmbeddedSystemX *Embed1 = new EmbeddedSystemX();
-	printf(Embed1->getStateCapabilities());
-	Embed1->Start();
-	printf(Embed1->getStateCapabilities());
-	Embed1->Initialized();
-	printf(Embed1->getStateCapabilities());
-	Embed1->Restart();
-	printf(Embed1->getStateCapabilities());
-	cout << "Trying to call restart while in PowerOnSelfTest" << endl;
-	Embed1->Restart();
-	cout << " Calling SelfTestFailed " << endl;
-	Embed1->SelfTestFailed();
-	printf(Embed1->getStateCapabilities());
-
+	EmbeddedSystemX* Embed10 = new EmbeddedSystemX();
+	Embed10->SelfTestOk();
+	printf(Embed10->getStateCapabilities());
+	Embed10->Initialized();
+	printf(Embed10->getStateCapabilities());
+	Embed10->Configure();
+	printf(Embed10->getStateCapabilities());
+	Embed10->ConfigurationEnded();
+	printf(Embed10->getStateCapabilities());
+	Embed10->Start();
+	printf(Embed10->getStateCapabilities());
+	Embed10->Suspend();
+	printf(Embed10->getStateCapabilities());
+	Embed10->Resume();
+	printf(Embed10->getStateCapabilities());
+	Embed10->chMode();
+	printf(Embed10->getStateCapabilities());
+	Embed10->chMode();
+	printf(Embed10->getStateCapabilities());
+	Embed10->chMode();
+	printf(Embed10->getStateCapabilities());
+	Embed10->Stop();
+	printf(Embed10->getStateCapabilities());
 	return 0;
 }
 
