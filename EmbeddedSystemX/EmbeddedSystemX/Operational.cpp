@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "Operational.h"
 
+/*
 EmbeddedState* Operational::_instance = 0;
 
 Operational::Operational() {}
@@ -18,3 +19,4 @@ void Operational::Restart(EmbeddedSystemX* t) {
 }
 
 Operational::~Operational(){}
+*/

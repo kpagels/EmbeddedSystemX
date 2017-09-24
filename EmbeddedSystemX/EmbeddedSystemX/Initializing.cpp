@@ -15,7 +15,7 @@ EmbeddedState* Initializing::Instance() {
 	return _instance;
 }
 void Initializing::Initialized(EmbeddedSystemX* t) {
-	ChangeState(t, Operational::Instance());
+	//ChangeState(t, Operational::Instance());
 }
 
 char * Initializing::WhatCanWeDo(void){

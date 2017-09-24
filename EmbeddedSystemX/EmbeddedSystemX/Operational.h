@@ -7,7 +7,8 @@ class EmbeddedState;
 class Operational: public EmbeddedState
 {
 private:
-	static EmbeddedState* _instance;
+	Operational();
+	/*
 
 public:
 	static EmbeddedState* Instance();
@@ -15,6 +16,6 @@ public:
 	void Restart(EmbeddedSystemX*);
 	~Operational();
 protected:
-	Operational();
+	Operational();*/
 };
 

@@ -151,6 +151,7 @@
     <ClInclude Include="Initializing.h" />
     <ClInclude Include="Operational.h" />
     <ClInclude Include="PowerOnSelfTest.h" />
+    <ClInclude Include="Ready.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
@@ -162,6 +163,7 @@
     <ClCompile Include="Failure.cpp" />
     <ClCompile Include="Operational.cpp" />
     <ClCompile Include="PowerOnSelfTest.cpp" />
+    <ClCompile Include="Ready.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
