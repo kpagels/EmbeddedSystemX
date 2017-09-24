@@ -2,15 +2,18 @@
 #include "EmbeddedState.h"
 #include "EmbeddedSystemX.h"
 
+class EmbeddedState;
 
 class Operational: public EmbeddedState
 {
 private:
-	EmbeddedSystemX* _context;
+	static EmbeddedState* _instance;
 
 public:
-	Operational(EmbeddedSystemX* context);
+	static EmbeddedState* Instance();
 	void Restart();
 	~Operational();
+protected:
+	Operational();
 };
 

@@ -2,7 +2,7 @@
 #include "EmbeddedState.h"
 #include "EmbeddedSystemX.h"
 
-class State;
+class EmbeddedState;
 
 class Failure : public EmbeddedState
 {

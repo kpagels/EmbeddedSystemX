@@ -11,7 +11,7 @@ EmbeddedState* PowerOnSelfTest::_instance = 0;
 PowerOnSelfTest::PowerOnSelfTest(){}
 
 EmbeddedState* PowerOnSelfTest::Instance(){
-	//should be singleton
+	// A singleton class
 	if (_instance == 0){
 		_instance = new PowerOnSelfTest;
 	}
