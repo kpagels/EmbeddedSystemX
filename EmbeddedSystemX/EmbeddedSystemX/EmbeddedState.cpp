@@ -14,7 +14,7 @@ void EmbeddedState::Configure(EmbeddedSystemX* system) {}
 void EmbeddedState::configurationEnded(EmbeddedSystemX* system) {}
 void EmbeddedState::Exit(EmbeddedSystemX* system) {}
 void EmbeddedState::Stop(EmbeddedSystemX* system) {}
-void EmbeddedState::Start(EmbeddedSystemX* system) {}
+void EmbeddedState::Start(EmbeddedSystemX* system) { cout << "embeddedState: Start()" << endl; }
 void EmbeddedState::Suspend(EmbeddedSystemX* system) {}
 void EmbeddedState::Resume(EmbeddedSystemX* system) {}
 void EmbeddedState::SelfTestFailed(EmbeddedSystemX* system) {}

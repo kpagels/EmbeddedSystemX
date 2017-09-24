@@ -22,14 +22,16 @@ int main(int argc, char* argv[])
 {
 	printf("Starting program\n");
 	EmbeddedSystemX *Embed1 = new EmbeddedSystemX();
+	printf(Embed1->getStateCapabilities());
 	Embed1->Start();
+	printf(Embed1->getStateCapabilities());
 
+	/*
 	printf(Embed1->getStateCapabilities());
 	Embed1->SelfTestFailed();
-	printf(Embed1->getStateCapabilities());
+	printf(Embed1->getStateCapabilities());*/
+	
 	//if(Embed1->get)
-
-
 	/*
 	Embed1->ChangeState(Failure::Instance());
 	printf(Embed1->getStateCapabilities());
