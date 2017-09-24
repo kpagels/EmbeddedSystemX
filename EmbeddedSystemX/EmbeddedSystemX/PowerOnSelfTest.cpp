@@ -8,7 +8,7 @@ using namespace std;
 
 EmbeddedState* PowerOnSelfTest::_instance = 0;
 
-PowerOnSelfTest::PowerOnSelfTest(){}
+PowerOnSelfTest::PowerOnSelfTest(){ }
 
 EmbeddedState* PowerOnSelfTest::Instance(){
 	// A singleton class
@@ -28,7 +28,15 @@ void PowerOnSelfTest::SelfTestOk(EmbeddedSystemX* t){
 	ChangeState(t, Initializing::Instance());
 }
 
-void PowerOnSelfTest::systemSelfTest(){}
+void PowerOnSelfTest::systemSelfTest(EmbeddedSystemX* t){
+	if (true) {
+		SelfTestOk(t);
+	}
+	else{ 
+		SelfTestFailed(t);
+	}
+
+}
 
 char* PowerOnSelfTest::WhatCanWeDo(void)
 {

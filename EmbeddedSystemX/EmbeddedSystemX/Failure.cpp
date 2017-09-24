@@ -6,7 +6,7 @@ using namespace std;
 
 EmbeddedState* Failure::_instance = 0;
 
-Failure::Failure() {}
+Failure::Failure() { display(-1); }
 
 EmbeddedState* Failure::Instance() {
 	if (_instance == 0) {
@@ -29,6 +29,8 @@ void Failure::Exit(EmbeddedSystemX* system){
 	//terrminate
 }
 
-void Failure::display(int ErrorNo){}
+void Failure::display(int ErrorNo){
+	cout << "ErrorNo: " << ErrorNo << endl;
+}
 
 Failure::~Failure(){}

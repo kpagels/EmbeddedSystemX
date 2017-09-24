@@ -14,6 +14,10 @@ using namespace std;
 int main(int argc, char* argv[])
 {
 	EmbeddedSystemX* Embed10 = new EmbeddedSystemX();
+	Embed10->SelfTestFailed();
+	printf(Embed10->getStateCapabilities());
+	Embed10->Restart();
+	printf(Embed10->getStateCapabilities());
 	Embed10->SelfTestOk();
 	printf(Embed10->getStateCapabilities());
 	Embed10->Initialized();
