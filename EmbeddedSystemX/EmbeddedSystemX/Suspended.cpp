@@ -24,6 +24,10 @@ void Suspended::Stop(EmbeddedSystemX* t) {
 	ChangeState(t, Ready::Instance());
 }
 
+char* Suspended::WhatCanWeDo() {
+	return "Resume / Stop\n";
+}
+
 Suspended::Suspended()
 {
 }

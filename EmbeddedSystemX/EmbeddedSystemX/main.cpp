@@ -37,6 +37,8 @@ int main(int argc, char* argv[])
 	printf("Calling Stop - should change to Ready\n");
 	Embed10->Stop();
 	printf(Embed10->getStateCapabilities());
+	Embed10->Start();
+	printf(Embed10->getStateCapabilities());
 	printf("Calling suspend  should change to Suspended \n");
 	Embed10->Suspend();
 	printf(Embed10->getStateCapabilities());
