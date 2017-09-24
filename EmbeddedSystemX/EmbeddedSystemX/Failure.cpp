@@ -16,6 +16,10 @@ EmbeddedState* Failure::Instance() {
 
 }
 
+char* Failure::WhatCanWeDo() {
+	return "WhatCanWeDo: Failure\n";
+}
+
 void Failure::Handle()
 {
 	cout << "Failure " << endl;

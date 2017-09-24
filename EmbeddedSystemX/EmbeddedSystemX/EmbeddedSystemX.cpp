@@ -9,7 +9,6 @@ EmbeddedSystemX::EmbeddedSystemX(){
 	cout << " EmbeddedSystemX constructor" << endl;
 	_state = NULL;
 	ChangeState(PowerOnSelfTest::Instance());
-	//_state = PowerOnSelfTest::Instance();
 }
 
 void EmbeddedSystemX::ChangeState(EmbeddedState* s){

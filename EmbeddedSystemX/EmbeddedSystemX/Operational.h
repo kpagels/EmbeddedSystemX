@@ -11,7 +11,9 @@ private:
 
 public:
 	static EmbeddedState* Instance();
+	char* WhatCanWeDo();
 	void Restart();
+	void Handle();
 	~Operational();
 protected:
 	Operational();

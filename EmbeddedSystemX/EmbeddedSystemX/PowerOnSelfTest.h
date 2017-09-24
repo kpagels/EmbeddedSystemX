@@ -11,8 +11,8 @@ public:
 
 	virtual char* WhatCanWeDo(void);
 	void Handle();
-	void SelfTestFailed();
-	void SelfTestOk();
+	void SelfTestFailed(EmbeddedSystemX*);
+	void SelfTestOk(EmbeddedSystemX*);
 protected:
 	PowerOnSelfTest();
 private:

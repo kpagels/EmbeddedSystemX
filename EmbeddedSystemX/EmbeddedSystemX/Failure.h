@@ -12,6 +12,7 @@ private:
 
 public:
 	static EmbeddedState* Instance();
+	char* WhatCanWeDo();
 	void Handle();
 	void Restart();
 	void Exit();

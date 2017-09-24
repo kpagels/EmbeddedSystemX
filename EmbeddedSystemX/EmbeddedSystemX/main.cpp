@@ -25,11 +25,21 @@ int main(int argc, char* argv[])
 	
 	printf(Embed1->getStateCapabilities());
 	printf("EMBED STATE: Initial state\n");
-	printf("--------\n");
+	printf("-------------\n");
 	Embed1->ChangeState(Initializing::Instance());
+	printf(Embed1->getStateCapabilities()); 
+	printf("-------------\n");
+	Embed1->ChangeState(Failure::Instance());
+	printf(Embed1->getStateCapabilities());
+	Embed1->ChangeState(Operational::Instance());
 	printf(Embed1->getStateCapabilities());
 
-
+	printf("----------------------\n");
+	EmbeddedSystemX* Embed2 = new EmbeddedSystemX();
+	printf(Embed2->getStateCapabilities());
+	Embed2->SelfTestFailed();
+	printf(Embed2->getStateCapabilities());
+	delete Embed1;
 
 	return 0;
 }
