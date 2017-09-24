@@ -37,6 +37,13 @@ int main(int argc, char* argv[])
 	printf("Calling Stop - should change to Ready\n");
 	Embed10->Stop();
 	printf(Embed10->getStateCapabilities());
+	printf("Calling Restart - should change to PowerOnSelfTest\n");
+	Embed10->Restart();
+	printf(Embed10->getStateCapabilities()); 
+	Embed10->SelfTestOk();
+	printf(Embed10->getStateCapabilities());
+	Embed10->Initialized();
+	printf(Embed10->getStateCapabilities());
 	Embed10->Start();
 	printf(Embed10->getStateCapabilities());
 	printf("Calling suspend  should change to Suspended \n");
