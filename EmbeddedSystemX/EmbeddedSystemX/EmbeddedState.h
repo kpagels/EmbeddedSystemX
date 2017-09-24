@@ -5,21 +5,21 @@ class EmbeddedSystemX;
 class EmbeddedState{
 public:
 	EmbeddedState();
-	void EmbeddedState::SelfTestOk(EmbeddedSystemX* system);
-	void EmbeddedState::Initialized(EmbeddedSystemX* system);
-	void EmbeddedState::Restart(EmbeddedSystemX* system);
-	void EmbeddedState::Configure(EmbeddedSystemX* system);
-	void EmbeddedState::configurationEnded(EmbeddedSystemX* system);
-	void EmbeddedState::Exit(EmbeddedSystemX* system);
-	void EmbeddedState::Stop(EmbeddedSystemX* system);
-	void EmbeddedState::Start(EmbeddedSystemX* system);
-	void EmbeddedState::Suspend(EmbeddedSystemX* system);
-	void EmbeddedState::Resume(EmbeddedSystemX* system);
-	void EmbeddedState::SelfTestFailed(EmbeddedSystemX* system);
-	void EmbeddedState::ConfigX(EmbeddedSystemX* system);
-	void EmbeddedState::chMode(EmbeddedSystemX* system);
-	void EmbeddedState::eventX(EmbeddedSystemX* system);
-	void EmbeddedState::eventY(EmbeddedSystemX* system);
+	virtual void EmbeddedState::SelfTestOk(EmbeddedSystemX* system);
+	virtual void EmbeddedState::Initialized(EmbeddedSystemX* system);
+	virtual void EmbeddedState::Restart(EmbeddedSystemX* system);
+	virtual void EmbeddedState::Configure(EmbeddedSystemX* system);
+	virtual void EmbeddedState::configurationEnded(EmbeddedSystemX* system);
+	virtual void EmbeddedState::Exit(EmbeddedSystemX* system);
+	virtual void EmbeddedState::Stop(EmbeddedSystemX* system);
+	virtual void EmbeddedState::Start(EmbeddedSystemX* system);
+	virtual void EmbeddedState::Suspend(EmbeddedSystemX* system);
+	virtual void EmbeddedState::Resume(EmbeddedSystemX* system);
+	virtual void EmbeddedState::SelfTestFailed(EmbeddedSystemX* system);
+	virtual void EmbeddedState::ConfigX(EmbeddedSystemX* system);
+	virtual void EmbeddedState::chMode(EmbeddedSystemX* system);
+	virtual void EmbeddedState::eventX(EmbeddedSystemX* system);
+	virtual void EmbeddedState::eventY(EmbeddedSystemX* system);
 	virtual char* WhatCanWeDo(void);
 protected:
 

@@ -18,26 +18,16 @@ int main(int argc, char* argv[])
 	printf(Embed1->getStateCapabilities());
 	Embed1->Start();
 	printf(Embed1->getStateCapabilities());
-
-	/*
+	Embed1->Initialized();
 	printf(Embed1->getStateCapabilities());
+	Embed1->Restart();
+	printf(Embed1->getStateCapabilities());
+	cout << "Trying to call restart while in PowerOnSelfTest" << endl;
+	Embed1->Restart();
+	cout << " Calling SelfTestFailed " << endl;
 	Embed1->SelfTestFailed();
-	printf(Embed1->getStateCapabilities());*/
-	
-	//if(Embed1->get)
-	/*
-	Embed1->ChangeState(Failure::Instance());
-	printf(Embed1->getStateCapabilities());
-	Embed1->ChangeState(Operational::Instance());
 	printf(Embed1->getStateCapabilities());
 
-
-	printf("----------------------\n");
-	EmbeddedSystemX* Embed2 = new EmbeddedSystemX();
-	printf(Embed2->getStateCapabilities());
-	printf(Embed2->getStateCapabilities());
-	delete Embed1;
-	*/
 	return 0;
 }
 
