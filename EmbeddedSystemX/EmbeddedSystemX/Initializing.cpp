@@ -20,6 +20,10 @@ void Initializing::Initialized(EmbeddedSystemX* t) {
 	ChangeState(t, Ready::Instance());
 }
 
+void Initializing::startInitializing()
+{
+}
+
 char * Initializing::WhatCanWeDo(void){
 	return "Initialized\n";
 }

@@ -10,6 +10,7 @@ public:
 	static EmbeddedState* Instance();
 	virtual char* WhatCanWeDo(void);
 	void Initialized(EmbeddedSystemX*);
+	void startInitializing();
 	
 protected:
 	Initializing();

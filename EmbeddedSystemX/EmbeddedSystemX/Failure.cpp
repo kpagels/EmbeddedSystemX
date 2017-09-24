@@ -29,4 +29,6 @@ void Failure::Exit(EmbeddedSystemX* system){
 	//terrminate
 }
 
+void Failure::display(int ErrorNo){}
+
 Failure::~Failure(){}

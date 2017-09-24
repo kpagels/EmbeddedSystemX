@@ -10,6 +10,7 @@ public:
 	virtual char* WhatCanWeDo(void);
 	void SelfTestFailed(EmbeddedSystemX*);
 	void SelfTestOk(EmbeddedSystemX*);
+	void systemSelfTest();
 protected:
 	PowerOnSelfTest();
 private:

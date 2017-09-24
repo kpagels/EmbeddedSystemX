@@ -28,6 +28,8 @@ void PowerOnSelfTest::SelfTestOk(EmbeddedSystemX* t){
 	ChangeState(t, Initializing::Instance());
 }
 
+void PowerOnSelfTest::systemSelfTest(){}
+
 char* PowerOnSelfTest::WhatCanWeDo(void)
 {
 	return "SelfTestOk / SelfTestFailed\n";
