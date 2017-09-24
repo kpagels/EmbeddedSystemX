@@ -47,7 +47,7 @@ void EmbeddedSystemX::Stop() {
 	_state->Stop();
 }
 void EmbeddedSystemX::Start() {
-	_state->Start();
+	_state->Start(this);
 }
 void EmbeddedSystemX::Suspend() {
 	_state->Suspend();

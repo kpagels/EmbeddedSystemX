@@ -2,8 +2,6 @@
 #include "EmbeddedState.h"
 #include "EmbeddedSystemX.h"
 
-class EmbeddedState;
-
 class PowerOnSelfTest : public EmbeddedState {
 
 public:
@@ -13,6 +11,7 @@ public:
 	void Handle();
 	void SelfTestFailed(EmbeddedSystemX*);
 	void SelfTestOk(EmbeddedSystemX*);
+	void Start(EmbeddedSystemX * t);
 protected:
 	PowerOnSelfTest();
 private:

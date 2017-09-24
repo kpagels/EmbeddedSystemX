@@ -26,7 +26,7 @@ int main(int argc, char* argv[])
 	printf(Embed1->getStateCapabilities());
 	printf("EMBED STATE: Initial state\n");
 	printf("-------------\n");
-	Embed1->ChangeState(Initializing::Instance());
+	Embed1->Start();
 	printf(Embed1->getStateCapabilities()); 
 	printf("-------------\n");
 	Embed1->ChangeState(Failure::Instance());
