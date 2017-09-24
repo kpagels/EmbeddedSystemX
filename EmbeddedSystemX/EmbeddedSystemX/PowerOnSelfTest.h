@@ -8,7 +8,6 @@ public:
 	static EmbeddedState* Instance();
 
 	virtual char* WhatCanWeDo(void);
-	void Handle();
 	void SelfTestFailed(EmbeddedSystemX*);
 	void SelfTestOk(EmbeddedSystemX*);
 	void Start(EmbeddedSystemX * t);

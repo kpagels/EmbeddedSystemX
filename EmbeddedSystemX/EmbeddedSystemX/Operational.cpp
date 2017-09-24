@@ -15,8 +15,4 @@ char* Operational::WhatCanWeDo() {
 }
 void Operational::Restart() {}
 
-//hvorfor er Handle nødvendig?
-void Operational::Handle(){}
-Operational::~Operational()
-{
-}
+Operational::~Operational(){}

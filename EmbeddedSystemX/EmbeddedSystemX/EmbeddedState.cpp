@@ -1,9 +1,9 @@
 #include "stdafx.h"
 #include <iostream>
-using namespace std;
 #include "EmbeddedSystemX.h"
 #include "EmbeddedState.h"
 
+using namespace std;
 
 EmbeddedState::EmbeddedState(){}
 

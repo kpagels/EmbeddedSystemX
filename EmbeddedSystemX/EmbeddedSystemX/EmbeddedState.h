@@ -5,7 +5,6 @@ class EmbeddedSystemX;
 class EmbeddedState{
 public:
 	EmbeddedState();
-	virtual void Handle() = 0;
 	void EmbeddedState::SelfTestOk(EmbeddedSystemX* system);
 	void EmbeddedState::Initialized(EmbeddedSystemX* system);
 	void EmbeddedState::Restart(EmbeddedSystemX* system);
@@ -27,6 +26,5 @@ protected:
 
 	void ChangeState(EmbeddedSystemX* t,EmbeddedState* s);
 	~EmbeddedState();
-	void Stop(EmbeddedSystemX * system);
 };
 

@@ -42,7 +42,3 @@ char* PowerOnSelfTest::WhatCanWeDo(void)
 {
 	return " WhatCanWeDo: PowerOnSelfTest\n";
 }
-void PowerOnSelfTest::Handle() {
-	cout << "PowerOnSelfTest \n" << endl;
-	//_context->ChangeState(new Failure(_context));
-}

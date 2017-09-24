@@ -11,7 +11,6 @@ class EmbeddedSystemX{
 public:
 	EmbeddedSystemX(); //constructor
 	~EmbeddedSystemX();
-	void Handle();
 	void SelfTestOk();
 	void Initialized();
 	void Restart();

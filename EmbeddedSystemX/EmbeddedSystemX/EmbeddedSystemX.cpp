@@ -20,11 +20,6 @@ char* EmbeddedSystemX::getStateCapabilities(void){
 	return _state->WhatCanWeDo();
 }
 
-void EmbeddedSystemX::Handle(){
-	cout << " Handle: EmbeddedSystemX " << _state << endl;
-	_state->Handle();
-}
-
 void EmbeddedSystemX::SelfTestOk() { 
 	_state->SelfTestOk(this); 
 }
@@ -54,23 +49,23 @@ void EmbeddedSystemX::Suspend() {
 }
 
 void EmbeddedSystemX::Resume() {
-	_state->Resume();
+	_state->Resume(this);
 }
 void EmbeddedSystemX::SelfTestFailed() {
 	cout << "EmbeddedSystemX: SelfTestFailed" << endl;
-	_state->SelfTestFailed();
+	_state->SelfTestFailed(this);
 }
 void EmbeddedSystemX::ConfigX() {
-	_state->ConfigX();
+	_state->ConfigX(this);
 }
 void EmbeddedSystemX::chMode() {
-	_state->chMode();
+	_state->chMode(this);
 }
 void EmbeddedSystemX::eventX() {
-	_state->eventX();
+	_state->eventX(this);
 }
 void EmbeddedSystemX::eventY() {
-	_state->eventY();
+	_state->eventY(this);
 }
 EmbeddedSystemX::~EmbeddedSystemX(){
 	cout << "EmbeddedSystemX destructor" << endl;

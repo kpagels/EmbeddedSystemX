@@ -23,8 +23,4 @@ char * Initializing::WhatCanWeDo(void)
 	return "WhatCanWeDo: Initializing\n";
 }
 
-//hvorfor er den her funktion nødvendig?
-void Initializing::Handle() {
-	cout << "Handle: Initializing " << endl;
-}
 Initializing::~Initializing(){}
