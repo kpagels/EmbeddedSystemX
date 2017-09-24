@@ -16,6 +16,7 @@ EmbeddedState* Failure::Instance() {
 
 }
 
+
 char* Failure::WhatCanWeDo() {
 	return "WhatCanWeDo: Failure\n";
 }
@@ -26,8 +27,12 @@ void Failure::Handle()
 	//_context->ChangeState(new PowerOnSelfTest(_context));
 }
 
-void Failure::Restart(){
+void Failure::Restart(EmbeddedSystemX* system){
+	// cout restaring ...
+	system->ChangeState(PowerOnSelfTest::Instance());
 }
-void Failure::Exit(){}
+void Failure::Exit(EmbeddedSystemX* system){
+	//terrminate
+}
 
 Failure::~Failure(){}

@@ -14,8 +14,8 @@ public:
 	static EmbeddedState* Instance();
 	char* WhatCanWeDo();
 	void Handle();
-	void Restart();
-	void Exit();
+	void Restart(EmbeddedSystemX * system);
+	void Exit(EmbeddedSystemX * system);
 	~Failure();
 protected:
 	Failure();

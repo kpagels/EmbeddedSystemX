@@ -16,6 +16,8 @@ EmbeddedState* Initializing::Instance() {
 }
 void Initializing::Initialized() {}
 
+
+
 char * Initializing::WhatCanWeDo(void)
 {
 	return "WhatCanWeDo: Initializing\n";

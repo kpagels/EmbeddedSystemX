@@ -7,22 +7,21 @@ using namespace std;
 
 EmbeddedState::EmbeddedState(){}
 
-void EmbeddedState::SelfTestOk() {}
-void EmbeddedState::Initialized() {}
-void EmbeddedState::Restart() {}
-void EmbeddedState::Configure() {}
-void EmbeddedState::configurationEnded() {}
-void EmbeddedState::Exit() {}
-void EmbeddedState::Stop() {}
-void EmbeddedState::Start() {}
-void EmbeddedState::Suspend() {}
-void EmbeddedState::Resume() {}
-void EmbeddedState::SelfTestFailed() {
-	cout << "EmbeddedState:: SelfTestFailed" << endl;}
-void EmbeddedState::ConfigX() {}
-void EmbeddedState::chMode() {}
-void EmbeddedState::eventX() {}
-void EmbeddedState::eventY() {}
+void EmbeddedState::SelfTestOk(EmbeddedSystemX* system) {}
+void EmbeddedState::Initialized(EmbeddedSystemX* system) {}
+void EmbeddedState::Restart(EmbeddedSystemX* system) {}
+void EmbeddedState::Configure(EmbeddedSystemX* system) {}
+void EmbeddedState::configurationEnded(EmbeddedSystemX* system) {}
+void EmbeddedState::Exit(EmbeddedSystemX* system) {}
+void EmbeddedState::Stop(EmbeddedSystemX* system) {}
+void EmbeddedState::Start(EmbeddedSystemX* system) {}
+void EmbeddedState::Suspend(EmbeddedSystemX* system) {}
+void EmbeddedState::Resume(EmbeddedSystemX* system) {}
+void EmbeddedState::SelfTestFailed(EmbeddedSystemX* system) {}
+void EmbeddedState::ConfigX(EmbeddedSystemX* system) {}
+void EmbeddedState::chMode(EmbeddedSystemX* system) {}
+void EmbeddedState::eventX(EmbeddedSystemX* system) {}
+void EmbeddedState::eventY(EmbeddedSystemX* system) {}
 
 char* EmbeddedState::WhatCanWeDo(void) {
 	return "nothing";
