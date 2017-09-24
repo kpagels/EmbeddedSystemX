@@ -29,6 +29,15 @@ void PowerOnSelfTest::SelfTestOk(EmbeddedSystemX* t){
 	ChangeState(t, Initializing::Instance());
 }
 
+void PowerOnSelfTest::Start(EmbeddedSystemX* t) {
+	int parameter = 1;
+	cout << "PoweronSelfTest: Started" << endl;
+	if (parameter = 1)
+		SelfTestOk(t);
+	else
+		SelfTestFailed(t);
+}
+
 char* PowerOnSelfTest::WhatCanWeDo(void)
 {
 	return " WhatCanWeDo: PowerOnSelfTest\n";
