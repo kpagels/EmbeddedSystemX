@@ -47,6 +47,7 @@ int main(int argc, char* argv[])
 
 	auto execute = [](Command* cmd) { cmd->Execute(); };
 	std::for_each(cmds.begin(), cmds.end(), execute);
+	cout << "test" << endl;
 	return 0;
 }
 
