@@ -1,6 +1,7 @@
 # EmbeddedSystemX
 Exercise 1 & 2 - Embedded Real Time System
-Aalborg University - Computer Technology
+
+ (Aalborg University 2017 - Computer Technology)
 
 This is the first handin in Embedded Real Time System which was delivered by our group. 
 The pdf files for exercise 1 and 2 can be found inside this project. 
